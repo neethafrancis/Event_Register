@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Registeration Form</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <img id="Logo" src="https://cdn.logojoy.com/wp-content/uploads/2018/08/23161105/39.png" alt="efuturex">
+        <nav>
+            <a class="nav-Link" href="Home" >Home</a>
+            <a class="nav-Link" href="Login">Login</a>
+            <a class="nav-Link" href="Registration">Registration</a>
+        </nav>
+    </header>
+    <section id="events">
+        {% for event in events %}
+        <div class="event-card">
+            <h2 class="event-title">{{event.event_title}}</h2>
+            <p class="event-location">Location:{{event.location}}</p>
+            <p class="event-date">Date:{{event.event_date}}</p>
+            <a class="det" href="{% url 'eventdetail' event.pk %}">Details</a>
+        </div>
+        {% endfor %}
+    </section>
+    <footer>
+        <p>©2023 Event Registration System</p>
+    </footer>
+</body>
+
+</html>

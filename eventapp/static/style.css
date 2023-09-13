@@ -1,0 +1,108 @@
+header {
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+
+}
+
+#Logo {
+    width: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+}
+
+.nav-Link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-Link:hover {
+    color: rgb(146, 142, 142);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.event-card {
+    color: rgb(219, 211, 198);
+    border: 1px solid rgb(22, 21, 21);
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px;
+    padding: 30px;
+    margin-top: 124px;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+}
+
+.det {
+    text-decoration: none;
+    color: rgb(219, 211, 198);
+    border: 1px solid rgb(22, 21, 21);
+    box-shadow: 0 1px 4px;
+    border-radius: 5px;
+
+}
+
+#events {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.event-cards {
+    color: rgb(219, 211, 198);
+    border: 1px solid hsl(0, 2%, 8%);
+    height: 435px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 1px 2px;
+    padding: 30px;
+    margin-top: 50px;
+
+}
+
+.full_form {
+    color: rgb(219, 211, 198);
+    border: 1px solid rgb(22, 21, 21);
+    height: 173px;
+    width: 335px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 1px 2px;
+    padding: 30px;
+    margin-top: 50px;
+
+
+}
+input{
+    color: white;
+    background-color: black;
+}
+.btn{
+    width: 57px;
+}

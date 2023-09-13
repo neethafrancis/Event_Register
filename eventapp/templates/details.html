@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full stack</title>
+</head>
+
+<body>
+    <header>
+        <img id="Logo" src="https://cdn.logojoy.com/wp-content/uploads/2018/08/23161105/39.png" alt="efuturex">
+        <nav>
+            <a class="nav-Link" href="Home">Home</a>
+            <a class="nav-Link" href="Login">Login</a>
+            <a class="nav-Link" href="Registration">Registration</a>
+        </nav>
+    </header>
+    <section id="events">
+        <div class="event-cards">
+            <h2>{{event.event_title}}</h2>
+            <p>Date:{{event.event_date}}</p>
+            <p>Location:{{event.location}}</p>
+            <p>{{event.description}}</p>
+            <form action="{% url 'eventdetail' event.pk %}" method="POST" class="full_form">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn" type="submit" value="Apply">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>©2023 Event Registration System</p>
+    </footer>
+
+</body>
+
+</html>
